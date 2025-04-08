@@ -7,6 +7,10 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\PersonasController;
 
+use App\Http\Controllers\CategoriaController;
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,4 +28,6 @@ Route::get('/persona', [PersonaController::class, 'mostrar']);
 
 Route::get('/personas', [PersonasController::class, 'listar']);
 
-Route::get('/productos', [ProductoController::class,'index'])->name('productos.index');
+Route::get('/productos', [ProductoController::class, 'index'])->name('productos.index');
+
+Route::get('/categorias', [CategoriaController::class, 'index']);
